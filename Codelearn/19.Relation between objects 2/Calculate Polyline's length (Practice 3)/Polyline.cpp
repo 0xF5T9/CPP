@@ -1,4 +1,4 @@
-#include "C:\Users\truon\Desktop\C++\Codelearn\19.Relation between objects 2\Calculate Polyline's length (Practice 3)\Polyline.h"
+#include "C:\Users\truon\Desktop\C++\CPP\Codelearn\19.Relation between objects 2\Calculate Polyline's length (Practice 3)\Polyline.h"
 
 // Class: Polyline | Getters & Setters Definitions
 void Polyline::setVPoints(std::vector<Point> points)
