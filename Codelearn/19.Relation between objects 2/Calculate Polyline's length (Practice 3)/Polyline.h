@@ -7,15 +7,20 @@ class Polyline
 {
 private:
 
+    /*  DEBUG  */
+    static const int DEBUG_LEVEL = 1;
+
+private:
+
     /*  Class Properties (Private)  */
     std::vector<Point> points;
 
 public:
 
     /*  Constructors & Destructor  */
-    Polyline() {}
-    Polyline(std::vector<Point> points): points(points) {}
-    ~Polyline() {}
+    Polyline() {if (DEBUG_LEVEL >= 1) {std::cout << "[*] (Class: Polyline) Default constructor called" << std::endl;}}
+    Polyline(std::vector<Point> points): points(points) {if (DEBUG_LEVEL >= 1) {std::cout << "[*] (Class: Polyline) Parameterized 1 constructor called" << std::endl;}}
+    ~Polyline() {if (DEBUG_LEVEL >= 1) {std::cout << "[*] (Class: Polyline) Destructor called" << std::endl;}}
 
 public:
 
