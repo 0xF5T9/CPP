@@ -26,6 +26,9 @@ int main()
     
     // Execute friend function (Access class private properties directly as a class friend)
     ShowUserInfo(user01);
+    std::cout << "--\n";
+    ChangeUserInfo(user01, "user99", "mypwd99");
+    ShowUserInfo(user01);
 
     return 0;
 }
