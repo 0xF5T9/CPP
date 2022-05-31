@@ -1,0 +1,1 @@
+#include "C:\Users\truon\Desktop\C++\CPP\Codelearn\20.Friend\Friend Class\point.h"
