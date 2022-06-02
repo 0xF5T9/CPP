@@ -19,6 +19,7 @@ int main()
     // Create 'Student' vector with elements (Random generated double parameters)
     std::vector<Student> students = 
     {
+        // Name, MathScore, PhysicScore, ChemistryScore
         Student("Vi", GetRand(), GetRand(), GetRand()),
         Student("Hong", GetRand(), GetRand(), GetRand()),
         Student("Ngoc", GetRand(), GetRand(), GetRand()),
