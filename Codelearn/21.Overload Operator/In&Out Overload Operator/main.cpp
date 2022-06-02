@@ -1,8 +1,8 @@
 /*
- *  21.Overload Operator | In Overload Operator
+ *  21.Overload Operator | In&Out Overload Operator
  */
 
-#include "C:\Users\truon\Desktop\C++\CPP\Codelearn\21.Overload Operator\In Overload Operator\customer.h"
+#include "C:\Users\truon\Desktop\C++\CPP\Codelearn\21.Overload Operator\In&Out Overload Operator\customer.h"
 
 int main ()
 {
