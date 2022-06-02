@@ -1,8 +1,8 @@
 /*
- *  Debug Project
+ *  22.Tests | Cards (Practice 1)
  */
 
-#include "func.h"
+#include "C:\Users\truon\Desktop\C++\CPP\Codelearn\22.Tests\Cards (Practice 1)\func.h"
 
 int main()
 {
@@ -32,8 +32,6 @@ int main()
     Card::sortcards(SomeCards, 1);
     std::cout << "After sorting(Desc): ";
     ShowVectorElements(SomeCards);
-
-    
 
     return 0;
 }
