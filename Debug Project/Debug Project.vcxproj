@@ -141,12 +141,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="card.cpp" />
+    <ClCompile Include="car.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="transport.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="card.h" />
+    <ClInclude Include="car.h" />
     <ClInclude Include="func.h" />
+    <ClInclude Include="transport.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
