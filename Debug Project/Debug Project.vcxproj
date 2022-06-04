@@ -141,14 +141,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="car.cpp" />
+    <ClCompile Include="circle.cpp" />
+    <ClCompile Include="geometry.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="transport.cpp" />
+    <ClCompile Include="rectangle.cpp" />
+    <ClCompile Include="triangle.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="car.h" />
+    <ClInclude Include="circle.h" />
     <ClInclude Include="func.h" />
-    <ClInclude Include="transport.h" />
+    <ClInclude Include="geometry.h" />
+    <ClInclude Include="rectangle.h" />
+    <ClInclude Include="triangle.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

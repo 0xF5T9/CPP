@@ -1,8 +1,8 @@
 /*
- *  Debug Project
+ *  22.Tests | Geometry (Practice 5)
  */
 
-#include "func.h"
+#include "C:\Users\truon\Desktop\C++\CPP\Codelearn\22.Tests\Geometry (Practice 5)\func.h"
 
 int main()
 {

@@ -1,7 +1,7 @@
 #pragma once
-#include "triangle.h"
-#include "rectangle.h"
-#include "circle.h"
+#include "C:\Users\truon\Desktop\C++\CPP\Codelearn\22.Tests\Geometry (Practice 5)\triangle.h"
+#include "C:\Users\truon\Desktop\C++\CPP\Codelearn\22.Tests\Geometry (Practice 5)\rectangle.h"
+#include "C:\Users\truon\Desktop\C++\CPP\Codelearn\22.Tests\Geometry (Practice 5)\circle.h"
 #include <iomanip>
 
 void ClearCinBuffer()
