@@ -1,8 +1,8 @@
 /*
- *  Debug Project
+ *  22.Tests | Person & Employees (Practice 6)
  */
 
-#include "func.h"
+#include "C:\Users\truon\Desktop\C++\CPP\Codelearn\22.Tests\Person & Employees (Practice 6)\func.h"
 
 int main()
 {
