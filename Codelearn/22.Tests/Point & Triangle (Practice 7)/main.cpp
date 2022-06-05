@@ -1,8 +1,8 @@
 /*
-*	Debug Project
+*   22.Tests | Point & Triangle (Practice 7)
 */
 
-#include "func.h"
+#include "C:\Users\truon\Desktop\C++\CPP\Codelearn\22.Tests\Point & Triangle (Practice 7)\func.h"
 #include <vector>
 
 int main()

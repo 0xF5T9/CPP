@@ -141,16 +141,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="employeeft.cpp" />
-    <ClCompile Include="employeept.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="person.cpp" />
+    <ClCompile Include="point.cpp" />
+    <ClCompile Include="triangle.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="employeeft.h" />
-    <ClInclude Include="employeept.h" />
     <ClInclude Include="func.h" />
-    <ClInclude Include="person.h" />
+    <ClInclude Include="point.h" />
+    <ClInclude Include="triangle.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
