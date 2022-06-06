@@ -18,21 +18,27 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="point.cpp">
+    <ClCompile Include="food.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="triangle.cpp">
+    <ClCompile Include="cannedfood.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="noncfood.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="point.h">
+    <ClInclude Include="food.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="func.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="triangle.h">
+    <ClInclude Include="cannedfood.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="noncfood.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

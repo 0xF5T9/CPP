@@ -1,6 +1,6 @@
 #pragma once
-#include "cannedfood.h"
-#include "noncfood.h"
+#include "C:\Users\truon\Desktop\C++\CPP\Codelearn\22.Tests\Food (Practice 8)\cannedfood.h"
+#include "C:\Users\truon\Desktop\C++\CPP\Codelearn\22.Tests\Food (Practice 8)\noncfood.h"
 
 void ClearCinBuffer()
 {

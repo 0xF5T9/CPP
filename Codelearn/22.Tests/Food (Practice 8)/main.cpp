@@ -2,7 +2,7 @@
 *	Debug Project
 */
 
-#include "func.h"
+#include "C:\Users\truon\Desktop\C++\CPP\Codelearn\22.Tests\Food (Practice 8)\func.h"
 
 int main()
 {
