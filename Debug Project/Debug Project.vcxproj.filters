@@ -18,27 +18,27 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="food.cpp">
+    <ClCompile Include="score.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="cannedfood.cpp">
+    <ClCompile Include="naturalscore.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="noncfood.cpp">
+    <ClCompile Include="socialscore.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="food.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="func.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="cannedfood.h">
+    <ClInclude Include="score.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="noncfood.h">
+    <ClInclude Include="naturalscore.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="socialscore.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

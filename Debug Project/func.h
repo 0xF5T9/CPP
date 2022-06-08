@@ -1,63 +1,44 @@
 #pragma once
-#include "cannedfood.h"
-#include "noncfood.h"
+#include "naturalscore.h"
+#include "socialscore.h"
+#include <iomanip>
 
 void ClearCinBuffer()
 {
 	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 }
 
-int GetRandInt(int minium = 0, int maxium = 100)
+void ShowVectorElements(std::vector<Score*> s, std::string extra = "", bool border = 0)
 {
-	int ret = rand() % (maxium + 1 - minium) + minium;
-	return ret;
-}
-
-double GetRandDouble(int minium = 0, int maxium = 100)
-{
-	int f = rand() % (maxium + 1 - minium) + minium;
-	int l = rand() % (99 + 1 - 0) + 0;
-	std::string s = std::to_string(f) + "." + std::to_string(l);
-	double ret = std::stod(s);
-	return ret;
-}
-
-void ShowVectorElements(const std::vector<CannedFood>& cf, std::string extra = "", bool border = 0)
-{
-	if (border == 1) std::cout << "--------------------------\n";
+	if (border == 1) std::cout << "-----------------------\n";
 	if (extra != "") std::cout << extra << "\n";
-	for (auto x : cf)
-	{
-		x.DisplayInfo();
-	}
-	if (border == 1) std::cout << "--------------------------" << std::endl;
-}
-
-void ShowVectorElements(const std::vector<NonCFood>& ncf, std::string extra = "", bool border = 0)
-{
-	if (border == 1) std::cout << "--------------------------\n";
-	if (extra != "") std::cout << extra << "\n";
-	for (auto x : ncf)
-	{
-		x.DisplayInfo();
-	}
-	if (border == 1) std::cout << "--------------------------" << std::endl;
-}
-
-void ShowVectorElements(const std::vector<Food*>& fs, std::string extra = "", bool border = 0)
-{
-	if (border == 1) std::cout << "--------------------------\n";
-	if (extra != "") std::cout << extra << "\n";
-	for (auto x : fs)
+	for (auto x : s)
 	{
 		x->DisplayInfo();
+		if (x != s.back()) std::cout << "--\n";
 	}
-	if (border == 1) std::cout << "--------------------------" << std::endl;
+	if (border == 1) std::cout << "-----------------------" << std::endl;
 }
 
-void FreeMemory(std::vector<Food*> fs)
+int GetRandInt(int maximum = 100, int minimum = 0)
 {
-	for (auto x : fs)
+	int ret = rand() % (maximum + 1 - minimum) + minimum;
+	return ret;
+}
+
+double GetRandDouble(int maximum = 10, int minimum = 0)
+{
+	std::string f = std::to_string(GetRandInt(maximum, minimum));
+	std::string l = std::to_string(GetRandInt(9, 0));
+	std::string fl = f + "." + l;
+	double ret = std::stod(fl);
+	if (ret > (double)maximum) ret = (double)maximum;
+	return ret;
+}
+
+void FreeMemory(std::vector<Score*> s)
+{
+	for (auto x : s)
 	{
 		delete x;
 	}

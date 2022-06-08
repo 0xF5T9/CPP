@@ -141,16 +141,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="cannedfood.cpp" />
-    <ClCompile Include="food.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="noncfood.cpp" />
+    <ClCompile Include="naturalscore.cpp" />
+    <ClCompile Include="score.cpp" />
+    <ClCompile Include="socialscore.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="cannedfood.h" />
-    <ClInclude Include="food.h" />
     <ClInclude Include="func.h" />
-    <ClInclude Include="noncfood.h" />
+    <ClInclude Include="naturalscore.h" />
+    <ClInclude Include="score.h" />
+    <ClInclude Include="socialscore.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
