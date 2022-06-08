@@ -1,35 +1,42 @@
 #include "naturalscore.h"
 
+// Class: NaturalScore | Getters & Setters Definitions
 void NaturalScore::setPhysic(double physic)
 {
 	this->physic = physic;
 }
+
 double NaturalScore::getPhysic() const
 {
 	return this->physic;
 }
+
 void NaturalScore::setChemistry(double chemistry)
 {
 	this->chemistry = chemistry;
 }
+
 double NaturalScore::getChemistry() const
 {
 	return this->chemistry;
 }
+
 void NaturalScore::setBiology(double biology)
 {
 	this->biology = biology;
 }
+
 double NaturalScore::getBiology() const
 {
 	return this->biology;
 }
+
 std::string NaturalScore::getBlockType()
 {
 	return this->blocktype;
 }
 
-
+// Class: NaturalScore | Class Function Definitions
 void NaturalScore::DisplayInfo()
 {
 	Score::DisplayInfo();
@@ -47,6 +54,7 @@ double NaturalScore::BlockB()
 	double ret = this->physic + this->chemistry + this->biology;
 	return ret;
 }
+
 double NaturalScore::AveragePoint()
 {
 	double ret = (BlockA() + BlockB()) / 6;

@@ -1,35 +1,42 @@
 #include "socialscore.h"
 
+// Class: SocialScore | Getters & Setters Definitions
 void SocialScore::setCE(double ce)
 {
 	this->ce = ce;
 }
+
 double SocialScore::getCE() const
 {
 	return this->ce;
 }
+
 void SocialScore::setGeography(double geography)
 {
 	this->geography = geography;
 }
+
 double SocialScore::getGeography() const
 {
 	return this->geography;
 }
+
 void SocialScore::setHistory(double history)
 {
 	this->history = history;
 }
+
 double SocialScore::getHistory() const
 {
 	return this->history;
 }
+
 std::string SocialScore::getBlockType()
 {
 	return this->blocktype;
 }
 
-
+// Class: SocialScore | Class Function Definitions
 void SocialScore::DisplayInfo()
 {
 	Score::DisplayInfo();
@@ -47,6 +54,7 @@ double SocialScore::BlockC()
 	double ret = this->ce + this->geography + this->history;
 	return ret;
 }
+
 double SocialScore::AveragePoint()
 {
 	double ret = (BlockA() + BlockC()) / 6;

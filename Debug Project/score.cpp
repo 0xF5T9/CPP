@@ -1,39 +1,47 @@
 #include "score.h"
 
+// Class: Score | Getters & Setters Definitions
 void Score::setName(std::string name)
 {
 	this->name = name;
 }
+
 std::string Score::getName() const
 {
 	return this->name;
 }
+
 void Score::setMath(double math)
 {
 	this->math = math;
 }
+
 double Score::getMath() const
 {
 	return this->math;
 }
+
 void Score::setLiterature(double literature)
 {
 	this->literature = literature;
 }
+
 double Score::getLiterature() const
 {
 	return this->literature;
 }
+
 void Score::setEnglish(double english)
 {
 	this->english = english;
 }
+
 double Score::getEnglish() const
 {
 	return this->english;
 }
 
-
+// Class: Score | Class Function Definitions
 void Score::DisplayInfo()
 {
 	std::cout << "Name: " << this->name << "\n";

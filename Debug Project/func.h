@@ -3,6 +3,7 @@
 #include "socialscore.h"
 #include <iomanip>
 
+// Global Function Definitions
 void ClearCinBuffer()
 {
 	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');

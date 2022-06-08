@@ -4,12 +4,13 @@
 #include <vector>
 #include <limits>
 
-void ClearCinBuffer();
+void ClearCinBuffer(); // Prototype (Defined in 'func.h')
 
 class Score
 {
 protected:
 
+	/*  Class Properties (Protected)  */
 	std::string name;
 	double math;
 	double literature;
@@ -17,11 +18,13 @@ protected:
 
 public:
 
+	/*  Constructors & Destructor  */
 	Score(std::string name = "", double math = 0, double literature = 0, double english = 0) : name(name), math(math), literature(literature), english(english) {}
 	~Score() {}
 
 public:
 	
+	/*  Getters & Setters  */
 	void setName(std::string name);
 	std::string getName() const;
 	void setMath(double math);
@@ -34,6 +37,7 @@ public:
 
 public:
 	
+	/*  Class Functions  */
 	virtual void DisplayInfo();
 	virtual double BlockA();
 	virtual double BlockB();
@@ -48,11 +52,12 @@ public:
 
 public:
 
+	/*  Overload Operators  */
 	friend std::istream& operator>>(std::istream& in, Score& s);
 	friend std::ostream& operator<<(std::ostream& out, Score& s);
 };
 
-inline std::istream& operator>>(std::istream& in, Score& s)
+inline std::istream& operator>>(std::istream& in, Score& s) // In Overload Operator Definition
 {
 	std::cout << "string'name': ";
 	std::getline(in, s.name);
@@ -69,7 +74,7 @@ inline std::istream& operator>>(std::istream& in, Score& s)
 	return in;
 }
 
-inline std::ostream& operator<<(std::ostream& out, Score& s)
+inline std::ostream& operator<<(std::ostream& out, Score& s) // Out Overload Operator Definition
 {
 	out << "string'name': " << s.name << "\n";
 	out << "double'math': " << s.math << "\n";
