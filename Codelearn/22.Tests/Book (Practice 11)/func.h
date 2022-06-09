@@ -1,6 +1,6 @@
 #pragma once
-#include "children.h"
-#include "adult.h"
+#include "C:\Users\novar\Documents\GitHub\CPP\Codelearn\22.Tests\Book (Practice 11)\children.h"
+#include "C:\Users\novar\Documents\GitHub\CPP\Codelearn\22.Tests\Book (Practice 11)\adult.h"
 
 void ClearCinBuffer()
 {
