@@ -18,27 +18,27 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="score.cpp">
+    <ClCompile Include="people.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="naturalscore.cpp">
+    <ClCompile Include="family.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="socialscore.cpp">
+    <ClCompile Include="group.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="people.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="func.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="score.h">
+    <ClInclude Include="family.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="naturalscore.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="socialscore.h">
+    <ClInclude Include="group.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

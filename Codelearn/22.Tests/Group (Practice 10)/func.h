@@ -1,5 +1,5 @@
 #pragma once
-#include "group.h"
+#include "C:\Users\novar\Documents\GitHub\CPP\Codelearn\22.Tests\Group (Practice 10)\group.h"
 
 void ClearCinBuffer()
 {

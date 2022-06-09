@@ -141,16 +141,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="family.cpp" />
+    <ClCompile Include="group.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="naturalscore.cpp" />
-    <ClCompile Include="score.cpp" />
-    <ClCompile Include="socialscore.cpp" />
+    <ClCompile Include="people.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="family.h" />
     <ClInclude Include="func.h" />
-    <ClInclude Include="naturalscore.h" />
-    <ClInclude Include="score.h" />
-    <ClInclude Include="socialscore.h" />
+    <ClInclude Include="group.h" />
+    <ClInclude Include="people.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
