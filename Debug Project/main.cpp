@@ -6,73 +6,60 @@
 
 int main()
 {
-	system("cls"); // Clear Vscode Terminal
-	const int testcase = 1; // Select test case
+	srand((unsigned int)time(0)); // Set random seed for rand()
+	const int testcase = 3; // Select test case
 
 	switch (testcase)
 	{
 		case 1:
 		{
-			// Create a vector that contains 'Book' objects
-			std::vector<Book> bs = {
-			Book("A Song of Ice and Fire", "George R. R. Martin", 1996),
-			Book("Harry Potter and the Chamber of Secrets", "J. K. Rowling", 1998),
-			Book("A Song of Ice and Fire", "George R. R. Martin", 1996),
-			Book("The Unspoken Name", "A. K. Larkwood", 2020)
-			};
+			{
+				// Create vector that contains integers
+				std::vector<int> sInt = { 1, 2, 5, 9, 6, 5, 2, 7, 8, 8, 4, 1, 4 };
+				ShowVectorElements(sInt, "Before filter: ");
 
-			// Create vector that contains 'Person' objects
-			std::vector<Person*> ps = {
-				new Adult("Thinh", 35, "Hanoi", bs),
-				new Adult("Quang", 21, "Vung Tau", bs),
-				new Children("Tuan", 14, "Ho Chi Minh", bs),
-				new Children("Hung", 15, "Ho Chi Minh"),
-				new Children("Van", 14, "Ho Chi Minh"),
-				new Children("Giang", 14, "Ho Chi Minh"),
-			};
-			ShowVectorElements(ps, "Before sorting: ", 1);
+				// Create vector that contains intergers (Filter duplicate from 'sInt')
+				std::vector<int> Filtered_sInt = GetListOfNumbersAppeared(sInt);
+				ShowVectorElements(Filtered_sInt, "After filter: ");
 
-			Person::SortPersonAge(ps);
-			ShowVectorElements(ps, "After sorting: ", 1);
+				break;
+			}
+		}
 
-			Person::GetListAge(ps, 1);
-
-			// The objects initialized by pointers via 'new' operator, therefore must be deallocated with 'delete'
-			FreeMemory(ps);
-			break;
-		}	// End of the scope, the vectors: 'bs', 'ps' will be destroyed
 		case 2:
 		{
 			{
-				// Create a vector that contains 'Book' objects
-				std::vector<Book> bs = {
-				Book("A Song of Ice and Fire", "George R. R. Martin", 1996),
-				Book("A Song of Ice and Fire", "George R. R. Martin", 1996),
-				Book("A Song of Ice and Fire", "George R. R. Martin", 1996),
-				Book("Harry Potter and the Chamber of Secrets", "J. K. Rowling", 1998),
-				Book("Harry Potter and the Chamber of Secrets", "J. K. Rowling", 1998),
-				Book("A Song of Ice and Fire", "George R. R. Martin", 1996),
-				Book("A Song of Ice and Fire", "George R. R. Martin", 1996),
-				Book("The Age of the Vikings", "Anders Winroth", 2014),
-				Book("The Age of the Vikings", "Anders Winroth", 2014),
-				Book("Children of Ash and Elm: A History of the Vikings", "Neil Price", 2020),
-				Book("The Unspoken Name", "A. K. Larkwood", 2020)
-				};
+				// Create vector that contains strings
+				std::vector<std::string> sString = { "Apple", "Orange", "Pale", "Apple", "Banana", "Durian", "Grape", "Orange", "Pale", "Dragonfruit", "Grape", "Apple"};
+				ShowVectorElements(sString, "Before filter: ");
 
-				// Create vector that contains 'Person' objects
-				std::vector<Person*> ps = {
-					new Adult("Thinh", 35, "Hanoi", bs),
-					new Adult("Quang", 21, "Vung Tau", bs),
-					new Children("Tuan", 14, "Ho Chi Minh", bs),
-				};
+				// Create vector that contains strings (Filter duplicate from 'sString')
+				std::vector<std::string> Filtered_sString = GetListOfStringAppeared(sString);
+				ShowVectorElements(Filtered_sString, "After filter: ");
 
-				std::vector<Book> fb = Person::GetMaxBookBorrowed(ps);
-				ShowVectorElements(fb);
-
-				// The objects initialized by pointers via 'new' operator, therefore must be deallocated with 'delete'
-				FreeMemory(ps);
 				break;
-			}	// End of the scope, the vectors: 'bs', 'ps', 'fb' will be destroyed
+			}
+		}
+
+		case 3:
+		{
+			{
+				// Create vector that contains 'Person' objects
+				std::vector<Person> Persons = {
+					Person("Vi", GetRandInt(100, 1)),
+					Person("Hung", GetRandInt(100, 1)),
+					Person("Tu", GetRandInt(100, 1)),
+					Person("Giang", GetRandInt(100, 1)),
+					Person("Vi", GetRandInt(100, 1)),
+					Person("Lam", GetRandInt(100, 1)),
+					Person("Tu", GetRandInt(100, 1))
+				};
+				ShowVectorElements(Persons, "Before filter: ");
+
+				// Create vector that contains 'Person' objects (Filter duplicate from 'Persons')
+				std::vector<Person> Filtered_Persons = GetListOfObjectAppeared(Persons);
+				ShowVectorElements(Filtered_Persons, "After filter: ");
+			}
 		}
 	}
 	
