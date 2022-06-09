@@ -123,7 +123,12 @@ std::vector<Book> Person::GetMaxBookBorrowed(std::vector<Person*> p)
         for (auto a : x->vb)
         {
             std::string temp = a.getNameBook();
-            for (auto& z : list)
+            /*
+             *  Why 'auto&' but not 'auto'?
+             *  Readmore!!
+             *  https://stackoverflow.com/questions/58825755/why-does-my-vector-not-update-with-the-changes-i-make-to-its-elements
+             */
+            for (auto& z : list) // Without '&' z is just a copy of the item in 'list' vector, use '&' for reads & writes
             {
                 if (z.getNameBook() == temp) z.count++;
             }
