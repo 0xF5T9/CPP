@@ -1,5 +1,5 @@
 /*
-*	Debug Project
+*	22.Test | Group (Practice 10)
 */
 
 #include "C:\Users\novar\Documents\GitHub\CPP\Codelearn\22.Tests\Group (Practice 10)\func.h"

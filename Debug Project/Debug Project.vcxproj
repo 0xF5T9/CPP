@@ -141,16 +141,24 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="family.cpp" />
-    <ClCompile Include="group.cpp" />
+    <ClCompile Include="adult.cpp" />
+    <ClCompile Include="children.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="people.cpp" />
+    <ClCompile Include="book.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="person.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="book.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="family.h" />
+    <ClInclude Include="adult.h" />
+    <ClInclude Include="children.h" />
     <ClInclude Include="func.h" />
-    <ClInclude Include="group.h" />
-    <ClInclude Include="people.h" />
+    <ClInclude Include="person.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -18,27 +18,33 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="people.cpp">
+    <ClCompile Include="book.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="family.cpp">
+    <ClCompile Include="person.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="group.cpp">
+    <ClCompile Include="children.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="adult.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="book.h">
+      <Filter>Header Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="people.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="func.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="family.h">
+    <ClInclude Include="person.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="group.h">
+    <ClInclude Include="adult.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="children.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
