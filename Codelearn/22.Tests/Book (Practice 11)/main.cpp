@@ -66,7 +66,7 @@ int main()
 					new Children("Tuan", 14, "Ho Chi Minh", bs),
 				};
 
-				std::vector<Book> fb = Person::GetMaxBookBorrowed(ps);
+				std::vector<Book> fb = Person::GetMaxBookBorrowed(ps); // Remarkable! - Read more...
 				ShowVectorElements(fb);
 
 				// The objects initialized by pointers via 'new' operator, therefore must be deallocated with 'delete'
