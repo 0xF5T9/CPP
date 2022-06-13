@@ -49,7 +49,7 @@ void RemoveListElementByVal(std::list<int>& li, int value, int mode = 1)
 			if (*it == value)
 			{
 				/*
-				* *.erase() return a iterator that point to near the one just got deleted
+				* *.erase() return a iterator that point to the next one just got deleted
 				* it = *.erase(it) | keeps the iterator pointing to the right list instead of the one that got deleted
 				* it-- | fix the iterator back to the right location
 				* 
@@ -68,13 +68,13 @@ void RemoveListElementByVal(std::list<int>& li, int value, int mode = 1)
 				* loop 6: skip (5), end loops
 				* 
 				* 
-				* the whole point of 'it--' is to prevent loop getting skipped
+				* the whole point of 'it--' is to prevent elements left unchecked
 				* because 'it = *.erase(it)' return the iterator which point to the next element
 				* then the loop end and for loop's increment executed, leaving the element unchecked
 				* i.e:
 				* loop 5: 3 found, executing it = *.erase(it)
 				* ↑ target got deleted, now it pointing next element to 5 (given list now: 1 2 4 5)
-				* now without 'it--' for loop ends because 5 was the last element and was leave unchecked
+				* now without 'it--' for loop ends because 5 was the last element and was left unchecked
 				*/
 				it = li.erase(it);
 				it--;
