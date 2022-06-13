@@ -183,6 +183,14 @@ void RemoveElementByVal(std::list<int>& li, int value)
 		if (*it == value) li.erase(it);
 	}
 }
+/*
+ *	Alternative: 
+ *	void RemoveElementByVal(std::list<int>& li, int value)
+ * 	{
+ * 		li.remove(value);	
+ * 	}
+ */
+
 
 void RemoveElementByVal(std::list<Person>& lp, std::string value)
 {

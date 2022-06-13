@@ -1,6 +1,6 @@
-﻿/*
-*	Debug Project
-*/
+/*
+ *  18.List | 6.Delete elements (extra)
+ */
 
 #include <iostream>
 #include <string>
