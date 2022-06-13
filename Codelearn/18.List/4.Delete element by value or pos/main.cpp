@@ -1,13 +1,13 @@
 /*
-*	Debug Project
+*	18.List | 4.Delete element by value or pos
 */
 
-#include "func.h"
+#include "C:\Users\truon\Desktop\C++\CPP\Codelearn\18.List\4.Delete element by value or pos\func.h"
 
 int main()
 {
 	srand((unsigned int)time(0)); // Set random seed for rand()
-	const int testcase = 1; // Select test case
+	const int testcase = 2; // Select test case
 
 	switch (testcase)
 	{
