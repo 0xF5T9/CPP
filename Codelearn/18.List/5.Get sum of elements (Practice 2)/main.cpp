@@ -1,6 +1,6 @@
 /*
-*	Debug Project
-*/
+ *  18.List | 5.Get sum of elements (Practice 2)
+ */
 
 #include <iostream>
 #include <string>
