@@ -1,6 +1,6 @@
-﻿/*
-*	Debug Project
-*/
+/*
+ *  18.List | 7.Sort list
+ */
 
 #include <iostream>
 #include <string>
