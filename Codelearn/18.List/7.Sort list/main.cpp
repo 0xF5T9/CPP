@@ -102,9 +102,9 @@ void SortListElements(std::list<int>& l, int mode = 1)
 
 int main()
 {
-	system("cls");
-	srand((unsigned int)time(0));
-	const int testcase = 2;
+	system("cls");	// Clear Vscode Terminal
+	srand((unsigned int)time(0));	// Set random seed for rand()
+	const int testcase = 2;	// Select testcase
 
 	switch (testcase)
 	{

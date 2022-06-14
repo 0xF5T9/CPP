@@ -1,10 +1,9 @@
-﻿/*
-*	Debug Project
-*/
+/*
+ *  19.Set | 1.Initialize set and remove vector element duplicates via set
+ */
 
 #include <iostream>
 #include <string>
-#include <list>
 #include <set>
 #include <vector>
 
