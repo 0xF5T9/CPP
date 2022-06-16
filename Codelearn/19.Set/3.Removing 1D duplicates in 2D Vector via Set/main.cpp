@@ -1,8 +1,8 @@
-﻿/*
- *	Debug Project
+/*
+ *  19.Set | 3.Removing 1D duplicates in 2D Vector via Set
  */
 
-#include "func.h"
+#include "C:\Users\truon\Desktop\C++\CPP\Codelearn\19.Set\3.Removing 1D duplicates in 2D Vector via Set\func.h"
 
 int main()
 {

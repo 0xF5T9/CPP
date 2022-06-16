@@ -3,7 +3,7 @@
 #include <string>
 #include <vector>
 #include <set>
-#include "person.h"
+#include "C:\Users\truon\Desktop\C++\CPP\Codelearn\19.Set\3.Removing 1D duplicates in 2D Vector via Set\person.h"
 
 void ShowVectorElements(const std::vector<std::vector<int> >& vvi, std::string extra = "")
 {
