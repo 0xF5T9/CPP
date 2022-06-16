@@ -1,8 +1,8 @@
-﻿/*
- *	Debug Project
+/*
+ *  19.Set | 2.Sorting logic & create internal comparison operator for user-defined datatypes
  */
 
-#include "func.h"
+#include "C:\Users\truon\Desktop\C++\CPP\Codelearn\19.Set\2.Sorting logic & create internal comparison operator for user-defined datatypes\func.h"
 
 int main()
 {
@@ -17,7 +17,7 @@ int main()
 			{
 				/*
 				 * Create a set of 'Person' objects with random 'age' property value
-				 * Unlike primitive datatypes like: char, int, double, ... (which have comparison operator on it own <, >,..)
+				 * Unlike primitive datatypes like: char, int, double, ... (which set have comparison operator for these on it own <, >,..)
 				 * 'Person' is a user-defined datatype(in this case: a class)
 				 *
 				 * Therefore we have to create our own internal comparison operator operator<()
@@ -60,7 +60,7 @@ int main()
 				{
 					GetRandInt(), GetRandInt(), GetRandInt(), GetRandInt(), GetRandInt()
 				};
-				ShowSetElements(st_2, "'st_2' elements: ");
+				ShowSetElements(st_2, "'st_2' elements: "); // Now its descending
 			}	// End of the scope, local variables & objects will be destroyed
 			break;
 		}
