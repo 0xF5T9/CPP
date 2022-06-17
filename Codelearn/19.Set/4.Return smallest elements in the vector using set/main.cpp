@@ -1,8 +1,8 @@
 /*
- *	Debug Project 
+ *  19.Set | 4.Return smallest elements in the vector using set
  */
 
-#include "func.h"
+#include "C:\Users\truon\Desktop\C++\CPP\Codelearn\19.Set\4.Return smallest elements in the vector using set\func.h"
 
 int main()
 {
