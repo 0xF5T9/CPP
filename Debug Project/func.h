@@ -3,41 +3,97 @@
 #include <string>
 #include <vector>
 #include <set>
+#include "person.h"
 
 int GetRandInt(int minimum = 0, int maximum = 100)
 {
 	return rand() % (maximum + 1 - minimum) + minimum;
 }
 
-void ShowVectorElements(const std::vector<int>& vi, std::string extra = "")
+void ShowSetElements(const std::set<int>& sti, std::string extra = "")
 {
 	if (extra != "") std::cout << extra;
-	for (const auto& x : vi)
+	std::set<int>::iterator it = sti.begin();
+	std::advance(it, sti.size() - 1);
+
+	for (const auto& x : sti)
 	{
 		std::cout << x;
-		if (&x != &vi.back()) std::cout << "-";
+		if (&x != &*it) std::cout << "-";
 	}
-	std::cout << " (Size: " << (int)vi.size() << ")" << std::endl;
+	std::cout << " (Size: " << (int)sti.size() << ")" << std::endl;
 }
 
-std::string GetSmallestElement(const std::vector<int>& vi, int th = 1)
+void ShowSetElements(const std::set<std::string>& sts, std::string extra = "")
 {
-	if (th > (int)vi.size()) return "<Doesn't exists>"; // If 'th' is bigger than the size of given vector
-	if (vi.empty()) return "The given vector is empty"; // If the given vector is empty
+	if (extra != "") std::cout << extra;
+	std::set<std::string>::iterator it = sts.begin();
+	std::advance(it, sts.size() - 1);
 
-	// Create a int set and initialize with given vector's element values
-	std::set<int> sti(vi.begin(), vi.end());
-	// Create a set iterator point to the first element of the set
-	std::set<int>::iterator it = sti.begin();
-
-	if (th == 1 || (int)sti.size() == 1)
+	for (const auto& x : sts)
 	{
-		return std::to_string(*it);
+		std::cout << x;
+		if (&x != &*it) std::cout << "-";
 	}
+	std::cout << " (Size: " << (int)sts.size() << ")" << std::endl;
+}
 
-	else if (th >= 2)
+void ShowSetElements(const std::set<Person>& stp, std::string extra = "")
+{
+	if (extra != "") std::cout << extra;
+	//std::set<Person>::iterator it = stp.begin();
+	//std::advance(it, stp.size() - 1);
+
+	for (const auto& x : stp)
 	{
-		std::advance(it, th - 1);
-		return std::to_string(*it);
+		x.Say();
+		//if (&x != &*it) std::cout << "-";
+	}
+	//std::cout << " (Size: " << (int)stp.size() << ")" << std::endl;
+}
+
+bool FindSetElement(const std::set<int>& sti, int value)
+{
+	/*
+	* '<setname>.find(x)' return an iterator that point to where x is found,
+	* otherwise it will return an iterator point to <setname>.end()
+	*/
+	std::set<int>::iterator it = sti.find(value);
+
+	if (it == sti.end()) // Nothing found
+	{
+		return false;
+	}
+	else
+	{
+		return true; // Found
+	}
+}
+
+bool FindSetElement(const std::set<std::string>& sts, std::string value)
+{
+	std::set<std::string>::iterator it = sts.find(value);
+
+	if (it == sts.end())
+	{
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+}
+
+bool FindSetElement(const std::set<Person>& stp, std::string value_name, int value_age)
+{
+	std::set<Person>::iterator it = stp.find(Person(value_name, value_age)); // Remarkable (Check 'person.h')
+
+	if (it == stp.end())
+	{
+		return false;
+	}
+	else
+	{
+		return true;
 	}
 }
