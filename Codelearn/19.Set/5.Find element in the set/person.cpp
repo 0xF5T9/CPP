@@ -1,4 +1,4 @@
-#include "person.h"
+#include "C:\Users\truon\Desktop\C++\CPP\Codelearn\19.Set\5.Find element in the set\person.h"
 
 void Person::setName(std::string name)
 {

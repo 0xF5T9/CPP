@@ -50,6 +50,8 @@
         "fstream": "cpp",
         "vector": "cpp",
         "algorithm": "cpp",
-        "list": "cpp"
+        "list": "cpp",
+        "xtree": "cpp",
+        "set": "cpp"
     }
 }

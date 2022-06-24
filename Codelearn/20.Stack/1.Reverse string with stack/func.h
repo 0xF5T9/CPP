@@ -4,10 +4,13 @@
 
 namespace c_stack
 {
-	void reverse_string(std::string& str)
+    using std::string;
+    using std::stack;
+
+	void reverse_string(string& str)
 	{
-		std::string ret = "";
-		std::stack<char> st;
+		string ret = "";
+		stack<char> st;
 		for (auto x : str)
 		{
 			st.push(x);
