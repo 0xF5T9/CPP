@@ -1,8 +1,8 @@
 /*
-*	Debug Project
-*/
+ *  20.Stack | 4.Stack concat (Practice 2)
+ */
 
-#include "func.h"
+#include "C:\Users\truon\Desktop\C++\CPP\Codelearn\20.Stack\4.Stack concat (Practice 2)\func.h"
 
 using std::vector;
 
