@@ -1,6 +1,6 @@
-﻿/*
-*	Debug Project
-*/
+/*
+ *	20.Stack | 5.Stickspan (Practice 3)
+ */
 
 #include <iostream>
 #include <vector>
@@ -14,7 +14,7 @@
 *   - Given int vector (represent the length of each wooden stick): [100,80,60,70,60,75,85]
 *   - Expect result (output vector): [1,1,1,2,1,4,6]
 * 
-*   - 1st stick '100' has none to the left: adding '1' as a result
+*   - 1st stick '100' has none to the left: adding '1' as a result (pretends like theres one)
 *   - 2nd stick '80' | the closest one on the left and is longer is: 100 (Adding '1' to result vector)
 *   - 3nd stick '60' | the closest one on the left and is longer is: 70 (Adding '1' to result vector)
 *   - 4nd stick '70' | the closest one on the left and is longer is: 80 (Adding '2' to result vector)
