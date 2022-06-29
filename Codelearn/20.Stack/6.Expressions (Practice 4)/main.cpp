@@ -1,8 +1,8 @@
-﻿/*
-*	Debug Project
-*/
+/*
+ *  20.Stack | 6.Expressions (Practice 4)
+ */
 
-#include "func.h"
+#include "C:\Users\truon\Desktop\C++\CPP\Codelearn\20.Stack\6.Expressions (Practice 4)\func.h"
 
 /*
 * Given string with only '{' and '}';
@@ -13,7 +13,7 @@
 */
 
 /*
-* 1. Nếu số phần ký tự trong chuỗi ban đầu là một số lẻ thì hàm trả kết quả (-1)
+* 1. Nếu số phần ký tự trong chuỗi ban đầu là một số lẻ thì hàm trả kết quả '-1'
 * 
 * 2. Duyệt chuỗi, xóa hết các cặp biểu thức cân bằng (một cặp bao gồm "{" và "}"
 *    (chú ý theo đúng thứ tự này và ở bất kỳ vị trí nào trong chuỗi được cho))

@@ -43,7 +43,7 @@ std::vector<int> stickSpan(std::vector<int> arr) // Vector only approach
         for (int x = i - 1; x != -1; x--)
         {
             if (arr[x] > arr[i]) { ret.push_back(i - x); break; } // Result for the current stick is found, break the x loop;
-            if (x == 0 && arr[i] > arr[x]) { ret.push_back(i - x + 1); break; } // If at the last loop and no stick found, pretends there one on the left of the first stick
+            if (x == 0 && arr[i] > arr[x]) { ret.push_back(i - x + 1); break; } // If at the last x loop and no stick found, pretends there one on the left of the first stick
         }
     }
     
