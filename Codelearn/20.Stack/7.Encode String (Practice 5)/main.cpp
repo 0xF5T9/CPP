@@ -1,8 +1,8 @@
-﻿/*
-*	Debug Project
-*/
+/*
+ *  20.Stack | 7.Encode String (Practice 5)
+ */
 
-#include "func.h"
+#include "C:\Users\truon\Desktop\C++\CPP\Codelearn\20.Stack\7.Encode String (Practice 5)\func.h"
 
 int main()
 {

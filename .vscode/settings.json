@@ -52,6 +52,8 @@
         "algorithm": "cpp",
         "list": "cpp",
         "xtree": "cpp",
-        "set": "cpp"
+        "set": "cpp",
+        "deque": "cpp",
+        "stack": "cpp"
     }
 }
