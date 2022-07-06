@@ -1,8 +1,8 @@
-﻿/*
-*	Debug Project
-*/
+/*
+ *  20.Stack | 8.Remove elements (Practice 6)
+ */
 
-#include "func.h"
+#include "C:\Users\truye\Desktop\C++\CPP\Codelearn\20.Stack\8.Remove elements (Practice 6)\func.h"
 
 /*
  *	Given a vector of ints and an int 'k'

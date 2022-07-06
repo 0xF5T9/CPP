@@ -3,6 +3,7 @@
 #include <string>
 #include <vector>
 #include <stack>
+#include <algorithm>
 
 void ShowElements(const std::vector<int>& vi, std::string extra = "")
 {
@@ -111,5 +112,5 @@ std::vector<int> RemoveElements_S(std::vector<int> arr, int k, bool debug = 0)
         }  
     }
     if (debug == true) std::cout << "[Debug] -=[------------------------]=-\n";
-    return ret;
+    return ret; // Return result
 }
