@@ -3,10 +3,12 @@
 #include <string>
 #include <vector>
 #include <stack>
+#include <algorithm>
 
 void ShowElements(const std::vector<int>& vi, std::string extra = "")
 {
-    if (extra != "") std::cout << extra;
+	if (extra != "") std::cout << extra;
+
 	for (const auto& x : vi)
 	{
 		std::cout << x;
@@ -15,101 +17,162 @@ void ShowElements(const std::vector<int>& vi, std::string extra = "")
 	}
 }
 
-std::vector<int> RemoveElements(std::vector<int> arr, int k, bool debug = 0)
+std::string DecodeString(std::string str) 
 {
-    /*
-    * The task is to removing first 'k' elements
-    * Using while loop (loop till k = 0, minus k by 1 each loop)
-    */
-	while (k != 0)
+	std::string result = "";
+	std::stack<int> st;
+	std::stack<char> sc;
+	std::string::iterator sit = str.begin();
+	std::string temp_str1 = "";
+	int size = 0;
+
+	for (int i = 0; i < str.length(); i++)
 	{
-		std::vector<int>::iterator it = arr.begin(); // Renew iterator to first element each loop
-		if (*it < *(it + 1)) // Delete arr[0] via iterator if arr[0] < arr[1]
-        { 
-            if (debug == 1) std::cout << "Removing " << *it << std::endl;
-            arr.erase(it);
-            k--; // Minus k by 1
-        }
-		else // Else (arr[1] < arr[0]) delete arr[1] via iterator
-        { 
-            if (debug == 1) std::cout << "Removing " << *(it + 1) << std::endl; 
-            arr.erase(it + 1);
-            k--; // Minus k by 1
-        }
+		if (*(sit + i) == '[') 
+		{
+			//-------[Get Size]-------//
+			std::string temp_str = "";
+			for (int x = 0; x < i; x++)
+			{
+				temp_str += str[x];
+			}
+			size = std::stoi(temp_str);
+			//-------[Get Size]-------//
+
+
+			//-------[Get Char]-------//
+			for (int z = i + 1; z < str.length(); z++)
+			{
+				//if (*(sit + z) < '0' && *(sit + z) != '[' && *(sit + z) != ']' || *(sit + z) > '9' && *(sit + z) != '[' && *(sit + z) != ']') sc.push(*(sit + z));
+
+				if (*(sit + z) == '[')
+				{
+					std::string::iterator m_it = (sit + z) - 1;
+
+					std::string m_size = "";
+					while (true)
+					{
+						if (*m_it < '0' || *m_it > '9') break;
+						m_size += *m_it;
+						m_it--;
+					}
+					std::reverse(m_size.begin(), m_size.end());
+
+					std::string m_str = "";
+					m_it = (sit + z + 1);
+					while (true)
+					{
+						if (*m_it == ']') break;
+						m_str += *m_it;
+						m_it++;
+					}
+
+					std::string m_result = "";
+					for (int l = 0; l < std::stoi(m_size); l++)
+					{
+						m_result += m_str;
+					}
+					result += m_result;
+				}
+
+				if (*(sit + z) == ']')
+				{
+					for (int x = z - 1; ; x--)
+					{
+						if (str[x] == '[') break;
+						sc.push(str[x]);
+					}
+
+					while (!sc.empty())
+					{
+						temp_str1 += sc.top();
+						sc.pop();
+					}
+
+					for (int a = 0; a < size; a++)
+					{
+						result += temp_str1;
+					}
+					size = 0;
+					temp_str1 = "";
+				}
+			}
+			//-------[Get Char]-------//
+		}
 	}
 
-	return arr; // Return results
+	return result;
 }
 
-std::vector<int> RemoveElements_S(std::vector<int> arr, int k, bool debug = 0)
+/*
+std::string DecodeString(std::string str)
 {
-    if (debug == true) std::cout << "[Debug] -=[------------------------]=-\n";
-    std::stack<int> st;
-    std::vector<int> ret;
-    if (debug == true)
-    {
-        std::cout << "stack<int> 'st' initialized\n";
-        std::cout << "vector<int> 'ret' initialized\n";
-    }
+	std::string result = "";
+	std::stack<int> st;
+	std::stack<char> sc;
+	std::string::iterator sit = str.begin();
+	int size = 0;
+	std::string t_str = "";
 
-    for (int i = 0; i < arr.size(); i++)
-    {
-        if (debug == true)
-        {
-            std::cout << "* For loop(i) " << i << ":\n";
-            std::cout << "- Current primary (element of 'arr'): " << arr[i] << "\n";
-        }
-        if (st.empty() || arr[i] <= st.top())
-        {
-            if (debug == true)
-            {
-                if (st.empty()) std::cout << "- Stack is empty, adding current-arr '" << arr[i] << "' to the stack\n";
-                else std::cout << "- Current-arr is less than or equals to stack top: '" << arr[i] << "' <= '" << st.top() << "'\n, adding current-arr '" << arr[i] << "' to the stack\n";
-            }
-            st.push(arr[i]);
-        }
-        else
-        {
-            while (!st.empty() && st.top() < arr[i] && k > 0)
-            {
-                if (debug == 1)
-                {
-                    std::cout << "- Stack top is less than current-arr and k higher than 0 (" << k << "): '" << st.top() << "' < '" << arr[i] << "'\n";
-                    std::cout << "- Popping stack top '" << st.top() << "' out of the stack\n";
-                    std::cout << "- Minus k by 1, new k: " << k - 1 << "\n";
-                }
-                st.pop();
-                k--;
-            }
-        }
-        if (k == 0)
-        {
-            if (debug == 1) std::cout << "- k is now equals to 0, loading all stack elements into return vector 'ret'\n";
-            while (!st.empty())
-            {
-                ret.push_back(st.top());
-                st.pop();
-            }
-            if (debug == 1) std::cout << "- reversed the return vector\n";
-            reverse(ret.begin(), ret.end());
-            for (int j = i; j < arr.size(); j++)
-            {
-                if (debug == 1)
-                {
-                    std::cout << "* For loop(j = i) " << j << ":\n";
-                    std::cout << "- Current primary (element of 'arr'): " << arr[j] << "\n";
-                    std::cout << "- Adding current-arr(j) '" << arr[j] << "' to the stack\n";
-                }
-                ret.push_back(arr[j]);
-            }
-            break;
-        }
-        if (st.empty())
-        {
-            if (debug == 1) std::cout << "- Stack is empty, adding current-arr '" << arr[i] << "' to the stack\n";
-            st.push(arr[i]);
-        }  
-    }
-    if (debug == true) std::cout << "[Debug] -=[------------------------]=-\n";
-    return ret;
-}
+	for (int i = 0; i < str.length(); i++)
+	{
+		std::string b_size = "";
+
+		if (*(sit + i) == '[')
+		{
+			for (int x = 0; x < i; x++)
+			{
+				std::string temp_str = "";
+				temp_str += str[x];
+				st.push(std::stoi(temp_str));
+			}
+
+			while (!st.empty())
+			{
+				b_size += std::to_string(st.top());
+				st.pop();
+			}
+			std::reverse(b_size.begin(), b_size.end());
+			size = std::stoi(b_size);
+		}
+
+		/*if (*(sit + i) == '[')
+		{
+			std::string::iterator m_it = (sit + i) - 1;
+			std::string m_size = "";
+			while (true)
+			{
+				if (*m_it < '0' || *m_it > '9') break;
+				m_size += *m_it;
+				m_it--;
+			}
+			std::reverse(m_size.begin(), m_size.end());
+			std::cout << m_size;
+			exit(0);
+		}
+
+		if (*(sit + i) == ']')
+		{
+			for (int x = i - 1; ; x--)
+			{
+				if (str[x] == '[') break;
+				sc.push(str[x]);
+			}
+
+			while (!sc.empty())
+			{
+				t_str += sc.top();
+				sc.pop();
+			}
+
+			for (int a = 0; a < size; a++)
+			{
+				result += t_str;
+			}
+			size = 0;
+			t_str = "";
+		}
+	}
+
+	return result;
+}*/
